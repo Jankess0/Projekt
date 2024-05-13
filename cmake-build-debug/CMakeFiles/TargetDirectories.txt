@@ -1,0 +1,5 @@
+/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/CMakeFiles/Projekt.dir
+/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/CMakeFiles/Projekt_autogen_timestamp_deps.dir
+/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/CMakeFiles/Projekt_autogen.dir

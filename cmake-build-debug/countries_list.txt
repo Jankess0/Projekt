@@ -1,0 +1,44 @@
+Albania - Tirana
+Andora - Andora la Vella
+Austria - Wiedeń
+Belgia - Bruksela
+Białoruś - Mińsk
+Bośnia i Hercegowina - Sarajewo
+Bułgaria - Sofia
+Chorwacja - Zagrzeb
+Cypr - Nikozja
+Czechy - Praga
+Dania - Kopenhaga
+Estonia - Tallin
+Finlandia - Helsinki
+Francja - Paryż
+Grecja - Ateny
+Hiszpania - Madryt
+Holandia (Niderlandy) - Amsterdam
+Irlandia - Dublin
+Islandia - Reykjavik
+Kosowo - Prisztina
+Liechtenstein - Vaduz
+Litwa - Wilno
+Luksemburg - Luksemburg
+Łotwa - Ryga
+Macedonia Północna - Skopje
+Malta - Valletta
+Mołdawia - Kiszyniów
+Monako - Monako
+Niemcy - Berlin
+Norwegia - Oslo
+Polska - Warszawa
+Portugalia - Lizbona
+Rosja - Moskwa
+Rumunia - Bukareszt
+San Marino - San Marino
+Serbia - Belgrad
+Słowacja - Bratysława
+Słowenia - Lublana
+Szwajcaria - Berno
+Szwecja - Sztokholm
+Ukraina - Kijów
+Węgry - Budapeszt
+Wielka Brytania - Londyn
+Włochy - Rzym

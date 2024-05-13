@@ -4,6 +4,9 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <vector>
+#include <QTextEdit>
+#include "fstream"
+#include "iostream"
 #include "Countries.h"
 #include "Country.h"
 
@@ -11,12 +14,18 @@
 #define PROJEKT_COUNTRYWINDOW_H
 
 
-class CountryWindow : public QWidget{
+class CountryWindow : public QWidget {
 private:
     std::string name;
-    QPushButton *backButton;
+    QVBoxLayout *layout1;
+    QPushButton *save_button;
+    QTextEdit *info_note;
+
 public:
     CountryWindow(const std::string& name);
+    void load();
+    void save_in_notes();
+    
 
 };
 

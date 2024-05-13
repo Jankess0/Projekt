@@ -105,6 +105,7 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
 
     load();
     show();
+
 }
 
 void StartWindow::showCountryWindow(int index) {
@@ -114,6 +115,7 @@ void StartWindow::showCountryWindow(int index) {
         newWindow->show();
 
     }
+
 }
 
 void StartWindow::save() {
@@ -129,4 +131,5 @@ void StartWindow::load() {
     std::getline(file, note, '\0');
     note_box->setPlainText(QString::fromStdString(note));
     file.close();
+
 }

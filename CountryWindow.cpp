@@ -57,3 +57,4 @@ void CountryWindow::save_in_notes() {
 
 }
 
+

@@ -113,7 +113,8 @@ void StartWindow::showCountryWindow(int index) {
         QString name = country_list->itemText(index);
         CountryWindow *newWindow = new CountryWindow(name.toStdString());
         newWindow->show();
-
+      
+        connect(newWindow->save_button, &QPushButton::clicked, this, &StartWindow::load);
     }
 
 }

@@ -25,8 +25,7 @@ public:
     CountryWindow(const std::string& name);
     void load();
     void save_in_notes();
-    
-
+    friend class StartWindow;
 };
 
 

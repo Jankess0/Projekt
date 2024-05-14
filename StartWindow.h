@@ -24,14 +24,19 @@ private:
     QLabel *budget_label;
     QLineEdit *budget_box;
     QLabel *sum_label;
-    QLineEdit *sum;
+    QLineEdit *sum_box;
     QPushButton *plus;
+    std::vector<Budget*> budget_sum;
 public:
     StartWindow(QWidget *p = nullptr);
     void showCountryWindow(int index);
     void save();
     void load();
-    void load_budget_box();
+    double load_budget_box();
+    void add_budget();
+    double get_sum();
+    void show_sum();
+    void box_clear();
 
 };
 

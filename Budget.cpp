@@ -1,10 +1,11 @@
 
 #include "Budget.h"
 
-double Budget::getSum() const {
-    return sum;
+double Budget::get_value() const {
+    return value;
 }
 
-void Budget::setSum(double sum, double add_to_sum) {
-    Budget::sum += add_to_sum;
+void Budget::set_value(double value) {
+    Budget::value = value;
 }
+

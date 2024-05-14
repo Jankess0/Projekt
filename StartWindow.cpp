@@ -62,9 +62,9 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
     sum_label = new QLabel("Suma wydatków:");
     sum_label->setStyleSheet("color: white;");
 
-    sum = new QLineEdit(this);
-    sum->setReadOnly(true);
-    sum->setStyleSheet("background-color: #FFFFFF;"
+    sum_box = new QLineEdit(this);
+    sum_box->setReadOnly(true);
+    sum_box->setStyleSheet("background-color: #FFFFFF;"
                                 "    border-radius: 8px;"
     );
 
@@ -97,11 +97,17 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
     layout->addWidget(budget_box);
     layout->addWidget(plus);
     layout->addWidget(sum_label);
-    layout->addWidget(sum);
+    layout->addWidget(sum_box);
     setLayout(layout);
+
+
     connect(country_list, QOverload<int>::of(&QComboBox::activated), this, &StartWindow::showCountryWindow);
     connect(note_button, &QPushButton::clicked, this, &StartWindow::save);
     connect(plus,&QPushButton::clicked, this, &StartWindow::load_budget_box);
+    connect(plus, &QPushButton::clicked, this, &StartWindow::add_budget);
+    connect(plus, &QPushButton::clicked, this, &StartWindow::show_sum);
+    connect(plus, &QPushButton::clicked, this, &StartWindow::box_clear);
+
     load();
     show();
 
@@ -134,9 +140,38 @@ void StartWindow::load() {
 
 }
 
-void StartWindow::load_budget_box() {
+double StartWindow::load_budget_box() {
     QString box_value = budget_box->text();
-   std::cout << box_value.toDouble() << std::endl;
-   //box_value.toDouble();
+    //std::cout << box_value.toDouble() << std::endl;
+    double value = box_value.toDouble();
+    return value;
 
+}
+
+void StartWindow::add_budget() {
+    Budget *value = new Budget;
+    value->set_value(load_budget_box());
+    //std::cout << value->get_value() << std::endl;
+    budget_sum.push_back(value);
+}
+
+double StartWindow::get_sum() {
+        double total = 0.0;
+        for (Budget* budget : budget_sum) {
+            total += budget->get_value();
+        }
+        //std::cout << total << std::endl;
+        return total;
+
+}
+
+void StartWindow::show_sum() {
+    QString sum = QString::number(get_sum());
+    QString dolar = "$";
+    QString total = sum + dolar;
+    sum_box->setText(total);
+}
+
+void StartWindow::box_clear() {
+    budget_box->clear();
 }

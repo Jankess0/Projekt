@@ -6,11 +6,11 @@
 
 class Budget {
 private:
-    double sum;
+    double value;
 public:
-    double getSum() const;
+    double get_value() const;
 
-    void setSum(double sum, double add_to_sum);
+    void set_value(double value);
     friend class StartWindow;
 };
 

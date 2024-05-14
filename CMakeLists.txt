@@ -22,7 +22,9 @@ add_executable(Projekt main.cpp
         Country.cpp
         Country.h
         CountryWindow.cpp
-        CountryWindow.h)
+        CountryWindow.h
+        Budget.cpp
+        Budget.h)
 target_link_libraries(Projekt
         Qt::Core
         Qt::Gui

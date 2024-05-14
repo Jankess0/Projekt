@@ -99,10 +99,9 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
     layout->addWidget(sum_label);
     layout->addWidget(sum);
     setLayout(layout);
-
     connect(country_list, QOverload<int>::of(&QComboBox::activated), this, &StartWindow::showCountryWindow);
     connect(note_button, &QPushButton::clicked, this, &StartWindow::save);
-
+    connect(plus,&QPushButton::clicked, this, &StartWindow::load_budget_box);
     load();
     show();
 
@@ -113,7 +112,7 @@ void StartWindow::showCountryWindow(int index) {
         QString name = country_list->itemText(index);
         CountryWindow *newWindow = new CountryWindow(name.toStdString());
         newWindow->show();
-      
+
         connect(newWindow->save_button, &QPushButton::clicked, this, &StartWindow::load);
     }
 
@@ -132,5 +131,12 @@ void StartWindow::load() {
     std::getline(file, note, '\0');
     note_box->setPlainText(QString::fromStdString(note));
     file.close();
+
+}
+
+void StartWindow::load_budget_box() {
+    QString box_value = budget_box->text();
+   std::cout << box_value.toDouble() << std::endl;
+   //box_value.toDouble();
 
 }

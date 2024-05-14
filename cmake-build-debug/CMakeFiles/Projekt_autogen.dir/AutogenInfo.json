@@ -258,6 +258,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/kamil/Desktop/Programy/D&D/Projekt/Budget.h",
+			"MU",
+			"EWIEGA46WW/moc_Budget.cpp",
+			null
+		],
+		[
 			"/Users/kamil/Desktop/Programy/D&D/Projekt/Countries.h",
 			"MU",
 			"EWIEGA46WW/moc_Countries.cpp",
@@ -341,6 +347,7 @@
 	"SETTINGS_FILE" : "/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/CMakeFiles/Projekt_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/Users/kamil/Desktop/Programy/D&D/Projekt/Budget.cpp", "MU", null ],
 		[ "/Users/kamil/Desktop/Programy/D&D/Projekt/Countries.cpp", "MU", null ],
 		[ "/Users/kamil/Desktop/Programy/D&D/Projekt/Country.cpp", "MU", null ],
 		[

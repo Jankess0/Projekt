@@ -37,6 +37,8 @@ Projekt_autogen/timestamp: \
   /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake \
   /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake \
+  /Users/kamil/Desktop/Programy/D&D/Projekt/Budget.cpp \
+  /Users/kamil/Desktop/Programy/D&D/Projekt/Budget.h \
   /Users/kamil/Desktop/Programy/D&D/Projekt/CMakeLists.txt \
   /Users/kamil/Desktop/Programy/D&D/Projekt/Countries.cpp \
   /Users/kamil/Desktop/Programy/D&D/Projekt/Countries.h \

@@ -7,6 +7,7 @@
 #include "Countries.h"
 #include "Country.h"
 #include "CountryWindow.h"
+#include "Budget.h"
 #include <QTextEdit>
 #include <QLineEdit>
 #include <QLabel>
@@ -30,6 +31,7 @@ public:
     void showCountryWindow(int index);
     void save();
     void load();
+    void load_budget_box();
 
 };
 

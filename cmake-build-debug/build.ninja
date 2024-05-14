@@ -97,6 +97,14 @@ build CMakeFiles/Projekt.dir/CountryWindow.cpp.o: CXX_COMPILER__Projekt_unscanne
   OBJECT_DIR = CMakeFiles/Projekt.dir
   OBJECT_FILE_DIR = CMakeFiles/Projekt.dir
 
+build CMakeFiles/Projekt.dir/Budget.cpp.o: CXX_COMPILER__Projekt_unscanned_Debug /Users/kamil/Desktop/Programy/D&D/Projekt/Budget.cpp || cmake_object_order_depends_target_Projekt
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Projekt.dir/Budget.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2 -fcolor-diagnostics
+  INCLUDES = -isystem "/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/Projekt_autogen/include" -isystem /Users/kamil/Qt/6.7.0/macos/lib/QtCore.framework/Headers -iframework /Users/kamil/Qt/6.7.0/macos/lib -isystem /Users/kamil/Qt/6.7.0/macos/mkspecs/macx-clang -isystem /Users/kamil/Qt/6.7.0/macos/include -isystem /Users/kamil/Qt/6.7.0/macos/lib/QtGui.framework/Headers -isystem /Users/kamil/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/Projekt.dir
+  OBJECT_FILE_DIR = CMakeFiles/Projekt.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Projekt
@@ -105,7 +113,7 @@ build CMakeFiles/Projekt.dir/CountryWindow.cpp.o: CXX_COMPILER__Projekt_unscanne
 #############################################
 # Link the executable Projekt
 
-build Projekt: CXX_EXECUTABLE_LINKER__Projekt_Debug CMakeFiles/Projekt.dir/Projekt_autogen/mocs_compilation.cpp.o CMakeFiles/Projekt.dir/main.cpp.o CMakeFiles/Projekt.dir/StartWindow.cpp.o CMakeFiles/Projekt.dir/Countries.cpp.o CMakeFiles/Projekt.dir/Country.cpp.o CMakeFiles/Projekt.dir/CountryWindow.cpp.o | /Users/kamil/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/kamil/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/kamil/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || Projekt_autogen Projekt_autogen_timestamp_deps
+build Projekt: CXX_EXECUTABLE_LINKER__Projekt_Debug CMakeFiles/Projekt.dir/Projekt_autogen/mocs_compilation.cpp.o CMakeFiles/Projekt.dir/main.cpp.o CMakeFiles/Projekt.dir/StartWindow.cpp.o CMakeFiles/Projekt.dir/Countries.cpp.o CMakeFiles/Projekt.dir/Country.cpp.o CMakeFiles/Projekt.dir/CountryWindow.cpp.o CMakeFiles/Projekt.dir/Budget.cpp.o | /Users/kamil/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/kamil/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/kamil/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || Projekt_autogen Projekt_autogen_timestamp_deps
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2
   LINK_LIBRARIES = -Wl,-rpath,/Users/kamil/Qt/6.7.0/macos/lib  /Users/kamil/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/kamil/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui  /Users/kamil/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker AGL  -framework AppKit  -framework ImageIO  -framework Metal
   LINK_PATH = -iframework /Users/kamil/Qt/6.7.0/macos/lib

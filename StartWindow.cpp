@@ -4,18 +4,13 @@
 StartWindow::StartWindow(QWidget *p) : QWidget(p){
     setWindowTitle("EuroTrip");
     resize(400, 500);
-   setStyleSheet("background-color: #000600");
+    setStyleSheet("background-color: #000600");
 
     country_list = new QComboBox(this);
     country_list->setStyleSheet(
 
             "background-color: none;"
             "border-radius: 5px;"
-//
-//            "down-arrow {"
-//            "    image: url(Down-Arrow-PNG-Images-HD.png);"
-//            "    background-color: none;"
-//            "}"
 
     );
 
@@ -70,22 +65,22 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
 
     plus = new QPushButton("+",this);
     plus->setStyleSheet("QPushButton {"
-                        "    background-color: #4CAF50; /* Zielony kolor tła */"
+                        "    background-color: #4CAF50;"
                         "    border: 2px solid #d3d3d3;;"
-                        "    color: Black; /* Kolor tekstu */"
-                        "    padding: 10px 24px; /* Wewnętrzne marginesy */"
+                        "    color: Black;"
+                        "    padding: 10px 24px;"
                         "    text-align: center;"
                         "    text-decoration: none;"
                         "    display: inline-block;"
                         "    font-size: 15px;"
                         "    margin: 4px 2px;"
                         "    cursor: pointer;"
-                        "    border-radius: 15px; /* Zaokrąglone krawędzie */"
+                        "    border-radius: 15px;"
                         "    height: 10px;"
                         "    width: 50px;"
                         "}"
                         "QPushButton:hover {"
-                        "    background-color: #45a049; /* Ciemniejszy odcień zielonego przy najechaniu myszą */"
+                        "    background-color: #45a049;"
                         "}");
 
 
@@ -103,7 +98,6 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
 
     connect(country_list, QOverload<int>::of(&QComboBox::activated), this, &StartWindow::showCountryWindow);
     connect(note_button, &QPushButton::clicked, this, &StartWindow::save);
-    connect(plus,&QPushButton::clicked, this, &StartWindow::load_budget_box);
     connect(plus, &QPushButton::clicked, this, &StartWindow::add_budget);
     connect(plus, &QPushButton::clicked, this, &StartWindow::show_sum);
     connect(plus, &QPushButton::clicked, this, &StartWindow::box_clear);
@@ -142,17 +136,23 @@ void StartWindow::load() {
 
 double StartWindow::load_budget_box() {
     QString box_value = budget_box->text();
-    //std::cout << box_value.toDouble() << std::endl;
     double value = box_value.toDouble();
+
+    if (value < 0){
+        throw std::runtime_error("Podano ujemna wartość!");
+    }
     return value;
 
 }
 
 void StartWindow::add_budget() {
-    Budget *value = new Budget;
-    value->set_value(load_budget_box());
-    //std::cout << value->get_value() << std::endl;
-    budget_sum.push_back(value);
+    try {
+        Budget *value = new Budget;
+        value->set_value(load_budget_box());
+        budget_sum.push_back(value);
+    }   catch (const std::runtime_error& e) {
+        QMessageBox::warning(this, "Błąd", e.what());
+    }
 }
 
 double StartWindow::get_sum() {
@@ -160,7 +160,6 @@ double StartWindow::get_sum() {
         for (Budget* budget : budget_sum) {
             total += budget->get_value();
         }
-        //std::cout << total << std::endl;
         return total;
 
 }

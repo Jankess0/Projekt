@@ -11,6 +11,7 @@
 #include <QTextEdit>
 #include <QLineEdit>
 #include <QLabel>
+#include <QMessageBox>
 #ifndef PROJEKT_STARTWINDOW_H
 #define PROJEKT_STARTWINDOW_H
 

@@ -9,6 +9,8 @@
 #include "iostream"
 #include "Countries.h"
 #include "Country.h"
+#include <QPixmap>
+#include <QLabel>
 
 #ifndef PROJEKT_COUNTRYWINDOW_H
 #define PROJEKT_COUNTRYWINDOW_H
@@ -20,6 +22,8 @@ private:
     QVBoxLayout *layout1;
     QPushButton *save_button;
     QTextEdit *info_note;
+    QLabel *pic_label;
+    //QPixmap *pic;
 
 public:
     CountryWindow(const std::string& name);

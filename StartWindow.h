@@ -26,8 +26,9 @@ private:
     QLineEdit *budget_box;
     QLabel *sum_label;
     QLineEdit *sum_box;
-    QPushButton *plus;
+    QPushButton *plus_button;
     std::vector<Budget*> budget_sum;
+    QPushButton *reset_button;
 public:
     StartWindow(QWidget *p = nullptr);
     void showCountryWindow(int index);
@@ -38,6 +39,7 @@ public:
     double get_sum();
     void show_sum();
     void box_clear();
+    void box_reset();
 
 };
 

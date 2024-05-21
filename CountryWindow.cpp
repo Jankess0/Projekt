@@ -3,6 +3,7 @@
 
 CountryWindow::CountryWindow(const std::string &name) : QWidget(), name(name){
     setWindowTitle(QString::fromStdString(name));
+    resize(600, 900);
     setStyleSheet("background-color: #000600");
     info_note = new QTextEdit(this);
     info_note->setStyleSheet("QTextEdit {"
@@ -26,8 +27,14 @@ CountryWindow::CountryWindow(const std::string &name) : QWidget(), name(name){
                                "QPushButton:pressed {"
                                "    background-color: #45a049;"
                                "}");
+    std::string dir = "/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/Photos/";
+    std::string full_path = dir + name;
+    QPixmap pic(QString::fromStdString(full_path));
+    pic_label = new QLabel(this);
+    pic_label->setPixmap(pic);
 
     layout1 = new QVBoxLayout(this);
+    layout1 ->addWidget(pic_label);
     layout1 ->addWidget(info_note);
     layout1 ->addWidget(save_button);
     setLayout(layout1);

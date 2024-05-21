@@ -3,7 +3,7 @@
 
 StartWindow::StartWindow(QWidget *p) : QWidget(p){
     setWindowTitle("EuroTrip");
-    resize(400, 500);
+    resize(600, 800);
     setStyleSheet("background-color: #000600");
 
     country_list = new QComboBox(this);
@@ -63,8 +63,8 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
                                 "    border-radius: 8px;"
     );
 
-    plus = new QPushButton("+",this);
-    plus->setStyleSheet("QPushButton {"
+    plus_button = new QPushButton("+", this);
+    plus_button->setStyleSheet("QPushButton {"
                         "    background-color: #4CAF50;"
                         "    border: 2px solid #d3d3d3;;"
                         "    color: Black;"
@@ -76,13 +76,37 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
                         "    margin: 4px 2px;"
                         "    cursor: pointer;"
                         "    border-radius: 15px;"
-                        "    height: 10px;"
+                        "    height: 15px;"
                         "    width: 50px;"
                         "}"
                         "QPushButton:hover {"
+                        "    background-color: #4CAF50;"
+                        "}"
+                        "QPushButton:pressed {"
                         "    background-color: #45a049;"
                         "}");
-
+    reset_button = new QPushButton("Resetuj wydatki", this);
+    reset_button->setStyleSheet("QPushButton {"
+                        "    background-color: #FE2D00;"
+                        "    border: 2px solid #d3d3d3;;"
+                        "    color: Black;"
+                        "    padding: 10px 24px;"
+                        "    text-align: center;"
+                        "    text-decoration: none;"
+                        "    display: inline-block;"
+                        "    font-size: 15px;"
+                        "    margin: 4px 2px;"
+                        "    cursor: pointer;"
+                        "    border-radius: 15px;"
+                        "    height: 15px;"
+                        "    width: 50px;"
+                        "}"
+                        "QPushButton:hover {"
+                        "    background-color: #FE0000;"
+                        "}"
+                         "QPushButton:pressed {"
+                         "    background-color: #DF0000;"
+                         "}");
 
     layout = new QVBoxLayout(this);
     layout->addWidget(country_list);
@@ -90,21 +114,23 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
     layout->addWidget(note_button);
     layout->addWidget(budget_label);
     layout->addWidget(budget_box);
-    layout->addWidget(plus);
+    layout->addWidget(plus_button);
     layout->addWidget(sum_label);
     layout->addWidget(sum_box);
+    layout->addWidget(reset_button);
     setLayout(layout);
 
 
     connect(country_list, QOverload<int>::of(&QComboBox::activated), this, &StartWindow::showCountryWindow);
     connect(note_button, &QPushButton::clicked, this, &StartWindow::save);
-    connect(plus, &QPushButton::clicked, this, &StartWindow::add_budget);
-    connect(plus, &QPushButton::clicked, this, &StartWindow::show_sum);
-    connect(plus, &QPushButton::clicked, this, &StartWindow::box_clear);
+    connect(plus_button, &QPushButton::clicked, this, &StartWindow::add_budget);
+    connect(plus_button, &QPushButton::clicked, this, &StartWindow::show_sum);
+    connect(plus_button, &QPushButton::clicked, this, &StartWindow::box_clear);
+    connect(reset_button, &QPushButton::clicked, this, &StartWindow::box_reset);
 
     load();
     show();
-
+    show_sum();
 }
 
 void StartWindow::showCountryWindow(int index) {
@@ -165,12 +191,33 @@ double StartWindow::get_sum() {
 }
 
 void StartWindow::show_sum() {
-    QString sum = QString::number(get_sum());
+    double sum = get_sum();
     QString dolar = "$";
-    QString total = sum + dolar;
+    QString total;
+    double conv_str = 0;
+    std::ifstream file("sum");
+    std::string data;
+    if(!std::getline(file, data, '\0')){
+        file.close();
+        total = QString::number(sum) + dolar;
+    } else {
+        conv_str = std::stod(data);
+        total = QString::number(sum+conv_str) + dolar;
+    }
+
     sum_box->setText(total);
+    std::ofstream out_file("sum");
+    out_file << sum + conv_str;
+    out_file.close();
 }
 
 void StartWindow::box_clear() {
     budget_box->clear();
+}
+
+void StartWindow::box_reset() {
+    std::ofstream file("sum", std::ios::trunc);
+    file.close();
+    sum_box->clear();
+    sum_box->setText("0$");
 }

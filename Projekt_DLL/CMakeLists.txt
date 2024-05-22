@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_library(Projekt_DLL SHARED
         Country.cpp
-        Countries.cpp)
+        Countries.cpp
+        Budget.cpp)
 
 

@@ -15,8 +15,6 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(Projekt main.cpp
-        Budget.cpp
-        Budget.h
         CountryWindow.cpp
         CountryWindow.h
         StartWindow.cpp

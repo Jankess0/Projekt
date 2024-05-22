@@ -1,3 +1,3 @@
-/Users/kamil/Desktop/Programy/D&D/Projekt_DLL/cmake-build-debug/CMakeFiles/Projekt_DLL.dir
-/Users/kamil/Desktop/Programy/D&D/Projekt_DLL/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/kamil/Desktop/Programy/D&D/Projekt_DLL/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kamil/Desktop/Programy/D&D/Projekt/Projekt_DLL/cmake-build-debug/CMakeFiles/Projekt_DLL.dir
+/Users/kamil/Desktop/Programy/D&D/Projekt/Projekt_DLL/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kamil/Desktop/Programy/D&D/Projekt/Projekt_DLL/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,7 +1,7 @@
 #include <iostream>
 
-#ifndef PROJEKT_BUDGET_H
-#define PROJEKT_BUDGET_H
+#ifndef BUDGET_H
+#define BUDGET_H
 
 
 class Budget {
@@ -15,4 +15,4 @@ public:
 };
 
 
-#endif //PROJEKT_BUDGET_H
+#endif //BUDGET_H

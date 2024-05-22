@@ -27,7 +27,7 @@ CountryWindow::CountryWindow(const std::string &name) : QWidget(), name(name){
                                "QPushButton:pressed {"
                                "    background-color: #45a049;"
                                "}");
-    std::string dir = "/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/Photos/";
+    std::string dir = "Photos/";
     std::string full_path = dir + name;
     QPixmap pic(QString::fromStdString(full_path));
     pic_label = new QLabel(this);
@@ -45,7 +45,7 @@ CountryWindow::CountryWindow(const std::string &name) : QWidget(), name(name){
 }
 
 void CountryWindow::load() {
-    std::string dir = "/Users/kamil/Desktop/Programy/D&D/Projekt/cmake-build-debug/Capitols/";
+    std::string dir = "Capitols/";
     std::string full_path = dir + name;
 
     std::ifstream file(full_path);

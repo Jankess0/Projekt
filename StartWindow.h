@@ -4,6 +4,7 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <vector>
+#include <cstdlib>
 #include "Countries.h"
 #include "Country.h"
 #include "CountryWindow.h"
@@ -20,6 +21,8 @@ class StartWindow : public QWidget{
 private:
     QComboBox *country_list;
     QVBoxLayout *layout;
+    QHBoxLayout *url_layout;
+    QHBoxLayout *calc_layout;
     QTextEdit *note_box;
     QPushButton *note_button;
     QLabel *budget_label;
@@ -29,6 +32,10 @@ private:
     QPushButton *plus_button;
     std::vector<Budget*> budget_sum;
     QPushButton *reset_button;
+    QPushButton *skyscaner_button;
+    QPushButton *booking_button;
+    QPushButton *google_explore_button;
+
 public:
     StartWindow(QWidget *p = nullptr);
     void showCountryWindow(int index);
@@ -40,6 +47,9 @@ public:
     void show_sum();
     void box_clear();
     void box_reset();
+    void skyscaner();
+    void booking();
+    void google_explore();
 
 };
 

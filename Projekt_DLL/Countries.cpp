@@ -11,6 +11,6 @@ Countries::Countries(){
     input.close();
 }
 
-std::vector<Country> Countries::get_list() {
+std::vector<Countries::Country> Countries::get_list() {
     return list;
 }

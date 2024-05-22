@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libProjekt_DLL.dylib -install_name @rpath/libProjekt_DLL.dylib CMakeFiles/Projekt_DLL.dir/Country.cpp.o CMakeFiles/Projekt_DLL.dir/Countries.cpp.o

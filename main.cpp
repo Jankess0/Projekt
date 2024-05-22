@@ -1,6 +1,5 @@
 #include <QApplication>
 #include "StartWindow.h"
-#include "Country.h"
 #include "Countries.h"
 
 int main(int argc, char *argv[]) {

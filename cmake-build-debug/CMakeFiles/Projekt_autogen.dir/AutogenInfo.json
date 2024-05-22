@@ -264,18 +264,6 @@
 			null
 		],
 		[
-			"/Users/kamil/Desktop/Programy/D&D/Projekt/Countries.h",
-			"MU",
-			"EWIEGA46WW/moc_Countries.cpp",
-			null
-		],
-		[
-			"/Users/kamil/Desktop/Programy/D&D/Projekt/Country.h",
-			"MU",
-			"EWIEGA46WW/moc_Country.cpp",
-			null
-		],
-		[
 			"/Users/kamil/Desktop/Programy/D&D/Projekt/CountryWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_CountryWindow.cpp",
@@ -301,6 +289,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"/Users/kamil/Desktop/Programy/D&D/Projekt/include",
 		"/Users/kamil/Qt/6.7.0/macos/lib/QtCore.framework/Headers",
 		"/Users/kamil/Qt/6.7.0/macos/lib/QtCore.framework",
 		"/Users/kamil/Qt/6.7.0/macos/mkspecs/macx-clang",
@@ -348,8 +337,6 @@
 	"SOURCES" : 
 	[
 		[ "/Users/kamil/Desktop/Programy/D&D/Projekt/Budget.cpp", "MU", null ],
-		[ "/Users/kamil/Desktop/Programy/D&D/Projekt/Countries.cpp", "MU", null ],
-		[ "/Users/kamil/Desktop/Programy/D&D/Projekt/Country.cpp", "MU", null ],
 		[
 			"/Users/kamil/Desktop/Programy/D&D/Projekt/CountryWindow.cpp",
 			"MU",

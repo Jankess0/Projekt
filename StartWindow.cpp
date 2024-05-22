@@ -15,7 +15,7 @@ StartWindow::StartWindow(QWidget *p) : QWidget(p){
     );
 
     Countries countries;
-    std::vector<Country> country_vec = countries.get_list();
+    std::vector<Countries::Country> country_vec = countries.get_list();
     country_list->addItem("Wybierz kraj!");
     for(auto& country : country_vec){
         country_list->addItem(QString::fromStdString(country.get_name()));

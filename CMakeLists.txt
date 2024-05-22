@@ -15,19 +15,20 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(Projekt main.cpp
-        StartWindow.cpp
-        StartWindow.h
-        Countries.cpp
-        Countries.h
-        Country.cpp
-        Country.h
+        Budget.cpp
+        Budget.h
         CountryWindow.cpp
         CountryWindow.h
-        Budget.cpp
-        Budget.h)
+        StartWindow.cpp
+        StartWindow.h)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
 target_link_libraries(Projekt
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        ${PROJECT_SOURCE_DIR}/lib/libProjekt_DLL.dylib
+
 )
 

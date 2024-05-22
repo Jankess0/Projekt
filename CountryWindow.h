@@ -7,10 +7,9 @@
 #include <QTextEdit>
 #include "fstream"
 #include "iostream"
-#include "Countries.h"
-#include "Country.h"
 #include <QPixmap>
 #include <QLabel>
+#include "Countries.h"
 
 #ifndef PROJEKT_COUNTRYWINDOW_H
 #define PROJEKT_COUNTRYWINDOW_H

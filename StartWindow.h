@@ -6,7 +6,6 @@
 #include <vector>
 #include <cstdlib>
 #include "Countries.h"
-#include "Country.h"
 #include "CountryWindow.h"
 #include "Budget.h"
 #include <QTextEdit>
